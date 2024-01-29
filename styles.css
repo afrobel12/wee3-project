@@ -3,54 +3,46 @@
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
-#thumbnali{
+.thumbnail-container{
     height: 20vh;
-    width: 50vw;
+    width: 35vw;
+    top: 3vh;
+    left: 32%;
     display: flex;
-    position: absolute;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
+    position: absolute;
     z-index: 100;
     background-color: rgba(0, 0, 0, 0.1);
-    top: 3vh;
-    left: 50%;
-    padding-left: 5px;
-    padding-right: 5px;
-    border-radius: 4px;
     backdrop-filter: blur(5px);
-    transform: translateX(-50%);
-    overflow-x: scroll;
-    overflow-y: hidden;
-    color-scheme: dark;
-
-}
-#img-container{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
     gap: 1rem;
+    
+
 }
 .thumbnail-img{
     width: 130px;
     height: 130px;
+    cursor: pointer;
 }
 
 .container{
     position: relative;
-    background: #aad5f6;
+
 } 
 
 .slide-1 {
-    background: url('./images/newyork.jpg')
+    background: url('./images/sunset.jpg')
 
 }
 
 .slide-2 {
-    background: url('./images/dubai.jpg')
+    background: url('./images/wild.jpg')
 
 }
 
 .slide-3 {
-    background: url('./images/addis-ababa.jpg')
+    background: url('./images/city.jpg')
 
 }
 
@@ -72,7 +64,7 @@
     z-index: 100;
     background: rgba(0, 0, 0, 0.1);
     border-radius: 50%;
-    transform: background 500ms;
+
 }
 
 .arr-img{
@@ -87,4 +79,15 @@
 }
 .nxt{
     right: 0;
+}
+@media (min-width: 800px) {
+    .container {
+        width: 100vw;
+    }
+}
+@media (min-width: 600px) {
+    .thumbnail-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }
